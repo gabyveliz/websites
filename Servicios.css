@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 90%;
+    background:#efb810;
+    background-size: 100vw 100vh;
+  }
+  
+  .grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+  .header {
+    grid-area: header;
+    color: #fdfdfd;
+    background-color: #efb810;
+    background-size: 100vw 100vh;
+      background-image: url(imagenes/fondo3.jpg);
+    align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: black;
+  }
+  
+  
+  .main {
+    grid-area: main;
+    background-color: white;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color:white;
+  }
+  
+  h1{
+    font-size:3.5rem ;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "header"  95px
+      "navbar"  50px
+      "main"    95px    
+      "footer"  95px;
+  }
+  
+  /*Variables para el tema del sitio */
+   
+  :root{
+    --primary:#efb810;
+    --secundary:#2e4469;
+    --background:#35495e;
+    --black-text:rgb(0, 0, 0);
+    --white-text:#ffffff;
+    --button-hover:#38755a;
+  }
+  
+  *{
+  margin: 0;
+  padding: 5;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  }
+  
+  body{
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  nav{
+    background-color: var(--primary);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  header h2{
+    color:var(--white-text);
+    font-size: 2rem;
+    letter-spacing: 2rem;
+  }
+  
+  nav ul{
+    display: flex;
+  }
+  
+  nav ul li{
+    border-right: solid.1rem rgb(61,61,61,0.41);
+  }
+  
+  nav ul li:last-child{
+    border-right: none;
+  }
+  
+  nav ul li a{
+    color:var(--white-text);
+    font-size: 1.2 rem;
+    padding: .10rem 3rem;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:hover{
+    background-color: var(--black-text);
+    transition: all.3s;
+  }
+  
+  .drawer{
+    color:var(--white-text);
+    float:left;
+    cursor: pointer;
+    display:none; 
+    margin-left: .1rem;
+    border: solid.1rem var(--white-text);
+    padding: .2rem;
+    border-radius: .1rem;;
+  }
+  
+  #ckbox{
+    display:none;
+  }
+  /* Estilos de la sección principal */
+  
+  main{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  main h2{
+    font-size: 1.7rem;
+    color:var(--black-text);
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  main p{
+    color:var(--black-text);
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  main form{
+  display: flex;
+  justify-content: center;
+  }
+  
+  main form button{
+    margin: 0.5rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .primary-btn{
+    background-color: var(--white-text);
+    color:var(--black-text);
+    border: solid.1rem var(--black-text);
+  }
+  
+  .outline-btn{
+    background-color: var(--white-text);
+    color: var(--black-text);
+  }
+  
+  .primary-btn:hover{
+    background-color: var(--black-text);
+    color: var(--primary);
+    border: solid.1rem var(--white-text);
+    transition: all .3s;   
+  }
+  
+  .outline-btn:hover{
+    background-color: var(--black-text);
+    color:var(--primary);
+    border: solid.1rem var(--white-text);
+    transform: all .3s; 
+  }
+  
+  
+  
+  
+  @media (min-width: 600px) {
+    .grid-container {
+      grid-template:
+        "header  header" 100px
+        "navbar  navbar" 50px
+        "main" auto
+        "footer  footer" 100px 
+        200px    auto;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .grid-container {
+      grid-template:
+        "header  header header"  100px
+        "navbar navbar navbar" 50px
+        "main  main   sidebar"auto
+        "footer  footer footer"  100px 
+        200px    auto   200px;
+    }
+  }
+      
+      .nav li a{
+          color:black;
+      background-color:white;
+          text-decoration:none;
+          padding:2.5px 121px;
+          display:block;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          height: 35px;
+          border: solid 5px black;
+      }
+  .nav li a.active{
+        background-color:white;
+          color:#000000;
+          font-weight:bolder;
+          font-size: 13pt;
+  }
+  .nav li a:hover{
+      background-color:white;
+      color:#000000;
+      font-size: 14pt;
+  }
+  .nav > li{
+      float:left;
+  }
+  .nav li ul{
+      display:none;
+      position:absolute;
+      min-width:100px;
+  }
+  .nav li:hover > ul{
+      display:block;		
+  }
+  .nav li ul li{
+      position:relative;
+  }
+      .nav li ul li ul{
+      right:-130px;
+      top:0px;
+  }
